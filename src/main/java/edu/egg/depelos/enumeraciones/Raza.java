@@ -1,0 +1,8 @@
+
+package edu.egg.depelos.enumeraciones;
+
+
+public enum Raza {
+    
+    LABRADOR, BULLDOG, PUG, GOLDENRETRIEVER, PASTORALEMAN, PITBULL, CHIHUAHUA, BEAGLE, ROTTWEILER, BOXER, DOBERMAN, GALGO, CANICHE, OTRA; 
+}
