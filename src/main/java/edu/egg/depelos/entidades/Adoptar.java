@@ -12,6 +12,7 @@ import org.hibernate.annotations.GenericGenerator;
 @Entity
 public class Adoptar {
     
+    
     @Id
     @GeneratedValue(generator = "uuid")
     @GenericGenerator(name = "uuid", strategy = "uuid2")
@@ -24,7 +25,7 @@ public class Adoptar {
     private Date fechaBaja;
 
     /**
-     * @return the id
+     * muruuuuu
      */
     public String getId() {
         return id;
