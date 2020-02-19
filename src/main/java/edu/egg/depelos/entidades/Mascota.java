@@ -3,6 +3,7 @@ package edu.egg.depelos.entidades;
 
 import edu.egg.depelos.enumeraciones.ColorPrimario;
 import edu.egg.depelos.enumeraciones.ColorSecundario;
+import edu.egg.depelos.enumeraciones.Estado;
 import edu.egg.depelos.enumeraciones.Raza;
 import edu.egg.depelos.enumeraciones.Sexo;
 import edu.egg.depelos.enumeraciones.Tamanio;
@@ -50,11 +51,17 @@ public class Mascota {
     @Enumerated(EnumType.STRING)
     private Raza raza;
     
+    @Enumerated(EnumType.STRING)
+    private Estado estado;
+    
     @OneToOne
     private Foto foto;
     
     @ManyToOne
     private Usuario usuario;
+    
+    @ManyToOne
+    private Zona zona;
     
     
     
@@ -225,6 +232,34 @@ public class Mascota {
      */
     public void setUsuario(Usuario usuario) {
         this.usuario = usuario;
+    }
+
+    /**
+     * @return the zona
+     */
+    public Zona getZona() {
+        return zona;
+    }
+
+    /**
+     * @param zona the zona to set
+     */
+    public void setZona(Zona zona) {
+        this.zona = zona;
+    }
+
+    /**
+     * @return the estado
+     */
+    public Estado getEstado() {
+        return estado;
+    }
+
+    /**
+     * @param estado the estado to set
+     */
+    public void setEstado(Estado estado) {
+        this.estado = estado;
     }
     
 }

@@ -4,5 +4,5 @@ package edu.egg.depelos.enumeraciones;
 
 public enum ColorSecundario {
     
-    BLANCO, NEGRO, MARRON, GRIS;    
+    BLANCO, NEGRO, MARRON, GRIS, NINGUNO;    
 }
