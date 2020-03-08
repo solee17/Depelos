@@ -1,0 +1,261 @@
+
+<!DOCTYPE html>
+<html lang="es" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+
+
+    <head>
+         <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+        <title>Tinder de Mascota - Inicio</title>
+
+       
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700" rel="stylesheet">
+
+        <!-- Bootstrap -->
+        <link href="/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+
+        <!-- Slick -->
+        <link rel="stylesheet" href="/css/slick.css"/>
+        <link rel="stylesheet" href="/css/slick-theme.css"/>
+
+        <!-- nouislider -->
+        <link type="text/css" rel="stylesheet" href="/css/nouislider.min.css"/>
+
+        <!-- Font Awesome Icon -->
+        <link rel="stylesheet" href="/css/font-awesome.min.css">
+
+        <!-- Custom stlylesheet -->
+        <link href="/css/style.css" rel="stylesheet">
+
+                </head>
+<header class="masthead text-center text-black">
+                        <nav class="navbar navbar-expand-lg navbar-dark ">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        <div class="brand_logo_container">
+                                            <img src="/img/logologin.png" class="brand_logo" alt="Logo">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-8 col-sm-2">
+                                    <h3  th:text="${titulo}"</h3>
+
+                                </div>
+
+
+                                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                                    <span class="navbar-toggler-icon"></span>
+                                </button>
+
+
+                            </div>
+                            <div class="row justify-content-rigth align-items-rigth ">
+
+                                <div class="col-md-3">
+                                    <div class="collapse navbar-collapse" id="navbarResponsive">
+                                        <ul class="navbar-nav ml-auto">
+                                                                                       
+                                            <li class="nav-item">
+                                        <a class="nav-link" href="logout">Salir</a>
+                                        </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-2 "></div>
+
+
+                        </nav>
+
+                    </header>
+                <body>
+                    <style>
+                        body {
+                            background-image: url("/img/fondo2-02.png");
+                            background-repeat: repeat;
+                            background-attachment: fixed;
+                            background-size: cover;
+                            background-size: 100% auto;
+                        }
+                    </style>
+
+
+                    
+
+                    <section class="no-padding" id="portfolio">
+                        <div class="portafolio">
+                            <div class="container-fluid">
+                                <div class="row no-gutter">
+
+                                    <div class="col-md-1 col-sm-2"></div>
+                                    <div class="col-md-2 col-sm-2">
+                                        <a href="buscar/AdoptadosporZona1" class="portfolio-box">
+                                            <img src="/img/botonadopciones-01.png" class="img-responsive-inicio" alt="">
+                                                <div class="portfolio-box-caption">
+                                                    <div class="portfolio-box-caption-content">
+                                                        <div class="project-category2 text-faded">
+                                                            Adopta una pequeña compañia animal.
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                        </a>
+                                    </div>
+
+                                    <div class="col-lg-2 col-sm-2">
+                                        <a href="perdidos" class="portfolio-box">
+                                            <img src="/img/botonperdidos-01.png" class="img-responsive-inicio" alt="">
+                                                <div class="portfolio-box-caption">
+                                                    <div class="portfolio-box-caption-content">
+                                                        <div class="project-category2 text-faded">
+                                                            Publica tu mascota perdida.
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                        </a>
+                                    </div>
+
+                                    <div class="col-lg-2 col-sm-2">
+                                        <a href="Encontrados"  class="portfolio-box">
+                                            <img src="/img/botonencontrados-01.png" class="img-responsive-inicio" alt="">
+                                                <div class="portfolio-box-caption">
+                                                    <div class="portfolio-box-caption-content">
+                                                        <div class="project-category2 text-faded">
+                                                            Alguien encontro una mascota perdida.
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                        </a>
+                                    </div>
+
+                                    <div class="col-lg-2 col-sm-2">
+                                        <a href="transito" class="portfolio-box">
+                                            <img src="/img/botontransito-01.png" class="img-responsive-inicio" alt="">
+                                                <div class="portfolio-box-caption">
+                                                    <div class="portfolio-box-caption-content">
+                                                        <div class="project-category text-faded">
+                                                            Hogar temporal a estos amiguitos.
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                        </a>
+                                    </div>
+
+                                    <div class="col-lg-2 col-sm-2">
+                                        <a href="donaciones" class="portfolio-box">
+                                            <img src="/img/botondonaciones-01.png" class="img-responsive-inicio" alt="">
+                                                <div class="portfolio-box-caption">
+                                                    <div class="portfolio-box-caption-content">
+                                                        <div class="project-category text-faded">
+                                                            Un amiguito necesita tu ayuda. 
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                        </a>
+                                    </div>
+                                    <div class="col-lg-3 col-sm-2"></div>
+                                     <div class="col-lg-6 col-sm-2">
+                                    <a class="nav-link" href="registrom" >
+                                                    <h2 class="rm">Registra tu Mascota</h2>
+                                                </a>
+                                         </div>
+                                </div>
+                            </div>
+                        </div>
+                        </section>
+                     <div class="section">
+                                            <!-- container -->
+                                            <div class="container">
+                                                <!-- row -->
+                                                
+                                                <div class="row">
+                                                    <div class="col-lg-12 col-xs-2">
+                                                        <h2 class="tituloexito"> Publicaciones recientes</h2>
+                                                    </div>
+                                                    
+                                                      <tbody>
+                                                        <tr th:each="mascota : ${mascotas}">
+                                                            <div class="col-lg-3 col-xs-4">
+                                                                <div class="product">
+                                                                    <div class="product-img">
+                                                                        
+
+                                                                        <img th:if="${mascota.foto != null}" th:src="@{/buscar/foto/__${mascota.foto.id}__}"  class="imgresponsive" >
+                                                                            <img th:unless="${mascota.foto != null}" th:src="@{/img/iconologin.png}"  class="imgresponsive" >
+                                                                                <!--<img <td th:file="${mascota.foto.contenido}" alt="">-->
+                                                                                <!--<img src="/img/iconologin.png" alt="">-->
+                                                                                </div>
+                                                                                <div class="product-body">
+                                                                                    <p <td th:text="${mascota.raza}" class="product-name"></p>
+                                                                                    <h3 <td th:text="${mascota.nombre}" class="product-name"><a href="#"></a></h3>
+                                                                                    <h4 <td th:text="${mascota.zona.nombre}" class="product-price"></h4>
+                                                                                    <h4 <td th:text="${mascota.estado}" class="product-price"></h4>
+
+                                                                                </div>
+                                                                                <div class="add-to-cart">
+                                                                                    <a href="/perfilm">
+                                                                                    <button class="add-to-cart-btn" ><i class=""></i> Visita el perfil</button>
+                                                                                    </a>
+                                                                                </div>
+                                                                                </div>
+                                                                                </div>
+                                                                                </tr>
+
+                                                </div>
+                                               
+                                            </div>
+                                            <!-- /STORE -->
+                                        </div>
+                                        <!-- /row -->
+
+<footer id="footer">
+                                                                                    <!-- top footer -->
+                                                                                    <div class="section">
+                                                                                        <!-- container -->
+                                                                                        <div class="container ">
+                                                                                            <!-- row -->
+                                                                                            <div class="row ">
+                                                                                                <div class="col-md-12 col-xs-1">
+                                                                                                    <div class="footer">
+                                                                                                        <h3 class="footer-title">Contacto</h3>
+                                                                                                        <ul class="footer-links">
+                                                                                                            <li><a href="#"><i class="fa fa-phone"></i>+0261-496-2345</a></li>
+                                                                                                            <li><a href="#"><i class="fa fa-envelope-o"></i>depelos@gmail.com</a></li>
+                                                                                                        </ul>
+                                                                                                    </div>
+                                                                                                </div>
+
+
+
+                                                                                                <div class="clearfix visible-xs"></div>
+
+                                                                                                <div class="col-md-12 col-xs-1">
+                                                                                                    <div class="footer">
+                                                                                                        <ul class="footer-links">
+                                                                                                            <li><a href="/terminosycondiciones">Terminos & Condiciones</a></li>
+                                                                                                            <li><a href="/quienessomos">Quienes somos</a></li>
+                                                                                                        </ul>
+                                                                                                    </div>
+                                                                                                </div>
+
+
+                                                                                                </footer>
+                    
+ <script src="/js/jquery.min.js"></script>
+                        <script src="/js/bootstrap.min.js"></script>
+                        <script src="/js/slick.min.js"></script>
+                        <script src="/js/nouislider.min.js"></script>
+                        <script src="/js/jquery.zoom.min.js"></script>
+                        <script src="/js/main.js"></script>
+
+                </body>
+
+                </html>

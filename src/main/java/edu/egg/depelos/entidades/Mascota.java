@@ -15,6 +15,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToOne;
+
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import org.hibernate.annotations.GenericGenerator;
@@ -54,7 +55,7 @@ public class Mascota {
     @Enumerated(EnumType.STRING)
     private Estado estado;
     
-    @OneToOne
+    @ManyToOne
     private Foto foto;
     
     @ManyToOne

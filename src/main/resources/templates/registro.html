@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="es" >
+<html lang="es" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+
 
 <head>
 
@@ -8,17 +9,17 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>Tinder de Mascota - Registro</title>
+  <title>Depelos - Registro</title>
  
-  <link href="../static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="../static/css/style.css" rel="stylesheet">
+  <link href="/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="/css/style.css" rel="stylesheet">
 
 </head>
 
 <body>
   <style>
     body {
-    background-image: url("../static/img/fondologin.png");
+    background-image: url("/img/fondologin.png");
     background-repeat: repeat;
     background-attachment: fixed;
     background-size: cover;
@@ -31,7 +32,7 @@
     <div class="masthead-content">
       <div class="container">
         <div class="brand_logo_container">
-          <img src="../static/img/logologin.png">
+          <img src="/img/logologin.png">
         </div>
         <h5 class="masthead-subheading mb-0">¡Que cada mascota encuentre su hogar!.</h5>
       </div>
@@ -42,12 +43,12 @@
     <div class="container">
       <div class="row justify-content-center align-items-center">
         
-        <div class="col-lg-7 col-lg-push-2.5 ">
+        <div class="col-lg-6 col-lg-push-2.5 ">
           <div class="p-5">
             <div class="d-flex justify-content-center">
             <h2 class="display-4">Registrate</h2>
           </div>
-            <form action="registrarmascota.html" method="POST" enctype="multipart/form-data">
+            <form action="/registrarusuario" method="POST" enctype="multipart/form-data">
                 
               <p th:if="${error != null}" th:text="${error}" style="color:red;"></p>
                 
@@ -65,8 +66,11 @@
                   <option th:each="zona : ${zonas}" th:value="${zona.id}" th:text="${zona.nombre}"></option>
               </select>
               
-              <label>Telefono</label>
-              <input type="telefono" class="form-control" name="teledono" th:value="${telefono}"/>
+              <label>Telefono*</label> 
+              <input type="telefono" class="form-control" name="telefono" th:value="${telefono}"/>
+              
+              <label>Foto</label>
+              <input type="file" class="form-control" name="archivo"/>
                             
               <label>Clave</label>
               <input type="password" class="form-control" name="clave1" th:value="${clave1}"/>
@@ -75,9 +79,7 @@
               <input type="password" class="form-control" name="clave2" th:value="${clave2}"/>
               
               <br/>
-              <div class="d-flex justify-content-center">
-              <a href="registrarmascota.html">
-              <button type="submit" class="btn btn-primary" >Registrarme</button>
+              <button type="submit" class="btn btn-primary " >Registrarme</button>
               </div>
             </a>
             </form>
@@ -88,8 +90,8 @@
   </section>
 
 
-  <script src="../static/vendor/jquery/jquery.min.js"></script>
-  <script src="../static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="/vendor/jquery/jquery.min.js"></script>
+  <script src="/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
 </body>
 

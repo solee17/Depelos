@@ -35,6 +35,8 @@ public class Usuario {
     private Date baja;
     
     
+    
+    
 
     /**
      * @return the id

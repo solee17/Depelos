@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="es" >
+<html lang="es" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+
 
 <head>
 
@@ -8,69 +9,101 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>Tinder de Mascota - Registro</title>
+  <title>Depelos - Registro</title>
  
-  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="css/style.css" rel="stylesheet">
+  <link href="/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="/css/style.css" rel="stylesheet">
 
 </head>
 
 <body>
   <style>
     body {
-    background-image: url("img/fondor.png");
-    background-repeat: no-repeat;
+    background-image: url("/img/fondologin.png");
+    background-repeat: repeat;
     background-attachment: fixed;
     background-size: cover;
     background-size: 100% auto;
     }
   </style>
 
-  
+   
+  <header class="masthead text-center text-black">
+    <div class="masthead-content">
+      <div class="container">
+        <div class="brand_logo_container">
+          <img src="/img/logologin.png">
+        </div>
+        <h5 class="masthead-subheading mb-0">¡Que cada mascota encuentre su hogar!.</h5>
+      </div>
+    </div>
+  </header>
 
   <section>
     <div class="container">
       <div class="row justify-content-center align-items-center">
-        <div class="col-lg-6 col-push-lg-3">
-        </div>
-        <div class="col-lg-8 col-lg-push-2 ">
+        
+        <div class="col-lg-7 col-lg-push-2.5 ">
           <div class="p-5">
-            <h2 class="display-4">Registra tu mascota</h2>
-            <form action="registrarmascota.html" method="POST" enctype="multipart/form-data">
+            <div class="d-flex justify-content-center">
+            <h2 class="display-4">Registrá tu mascota</h2>
+          </div>
+            <form action="/registrarmascota" method="POST" enctype="multipart/form-data">
                 
               <p th:if="${error != null}" th:text="${error}" style="color:red;"></p>
                 
+               <label>Tu Mail</label>
+              <input type="text" class="form-control" name="mail" th:value="${mail}"/>
+              
               <label>Nombre</label>
               <input type="text" class="form-control" name="nombre" th:value="${nombre}"/>
 
-              <label>Apellido</label>
-              <input type="text" class="form-control" name="apellido" th:value="${apellido}"/>
+              <label>Edad</label>
+              <input type="text" class="form-control" name="edad" th:value="${edad}"/>
               
-              <label>E-Mail</label>
-              <input type="email" class="form-control" name="mail" th:value="${mail}"/>
+              <label>Estado</label>
+              <select class="form-control" name="estado"> 
+                  <option th:each="estado : ${estados}" th:value="${estado}" th:text="${estado}"></option>
+              </select>
               
-              <label>Zona</label>
+              <label>Sexo</label>
+              <select class="form-control" name="sexo"> 
+                  <option th:each="sexo : ${sexos}" th:value="${sexo}" th:text="${sexo}"></option>
+              </select>
+              
+              <label>Tamaño</label>
+              <select class="form-control" name="tamanio"> 
+                  <option th:each="tamanio : ${tamanios}" th:value="${tamanio}" th:text="${tamanio}"></option>
+              </select>
+              
+              <label>Color Primario</label>
+              <select class="form-control" name="colorPrimario"> 
+                  <option th:each="colorPrimario : ${colorPrimarios}" th:value="${colorPrimario}" th:text="${colorPrimario}"></option>
+              </select>
+              
+              <label>Color Secundario</label>
+              <select class="form-control" name="colorSecundario"> 
+                  <option th:each="colorSecundario : ${colorSecundarios}" th:value="${colorSecundario}" th:text="${colorSecundario}"></option>
+              </select>
+              
+              <label>Raza</label>
+              <select class="form-control" name="raza"> 
+                  <option th:each="raza : ${razas}" th:value="${raza}" th:text="${raza}"></option>
+              </select>
+              
+              <label>Foto</label>
+              <input type="file" class="form-control" name="archivo"/>
+              
+               <label>Zona</label>
               <select class="form-control" name="idZona"> 
                   <option th:each="zona : ${zonas}" th:value="${zona.id}" th:text="${zona.nombre}"></option>
               </select>
-              
-              <label>Telefono</label>
-              <input type="telefono" class="form-control" name="telefono" th:value="${telefono}"/>
                             
-              <label>Clave</label>
-              <input type="password" class="form-control" name="clave1" th:value="${clave1}"/>
               
-              <label>Repetir Clave</label>
-              <input type="password" class="form-control" name="clave2" th:value="${clave2}"/>
               
               <br/>
-
-              <label for="text">Photo</label>
-                <input type="file" onchange="document.getElementById('blah').src = window.URL.createObjectURL(this.files[0])">
-                <img id="blah" alt="30%" class="center" src="img/addpic.png" /><img/>
-
-              <a href="registrarmascota.html">
               <button type="submit" class="btn btn-primary" >Registrarme</button>
+              </div>
             </a>
             </form>
           </div>
@@ -80,8 +113,8 @@
   </section>
 
 
-  <script src="vendor/jquery/jquery.min.js"></script>
-  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="/vendor/jquery/jquery.min.js"></script>
+  <script src="/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
 </body>
 

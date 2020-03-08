@@ -1,0 +1,265 @@
+   
+<!DOCTYPE html>
+<html lang="es" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+
+    <head>
+        <meta charset="utf-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+                <meta name="viewport" content="width=device-width, initial-scale=1">
+                    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+                    <title>DePelos--Adopción</title>
+
+                    <!-- Google font -->
+                    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700" rel="stylesheet">
+
+                        <!-- Bootstrap -->
+                        <link href="/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+
+                            <!-- Slick -->
+                            <link rel="stylesheet" href="/css/slick.css"/>
+                            <link rel="stylesheet" href="/css/slick-theme.css"/>
+
+                            <!-- nouislider -->
+                            <link type="text/css" rel="stylesheet" href="/css/nouislider.min.css"/>
+
+                            <!-- Font Awesome Icon -->
+                            <link rel="stylesheet" href="/css/font-awesome.min.css">
+
+                                <!-- Custom stlylesheet -->
+                                <link href="/css/style.css" rel="stylesheet">
+
+
+                                    </head>
+
+                                    <body>
+                                        <style>
+                                            body {
+                                                background-image: url("/img/fondologin.png");
+                                                background-repeat: repeat;
+                                                background-attachment: fixed;
+                                                background-size: cover;
+                                                background-size: 100% ;
+                                            }
+                                        </style>
+                                        <header>
+                                            <div id="header">
+                                                <!-- container -->
+                                                <div class="container">
+                                                    <!-- row -->
+                                                    <div class="row">
+                                                        <!-- LOGO -->
+                                                        <div class="col-md-3">
+                                                            <div class="header-logo">
+                                                                <a href="buscar/AdoptadosporZona1" class="logo">
+                                                                    <img src="/img/logologin.png" alt="">
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                        <!-- /LOGO -->
+
+                                                        <!-- SEARCH BAR -->
+                                                        <div class="col-md-7">
+                                                            <div class="header-search">
+                                                                <form>
+                                                                    <input class="input" placeholder="Busqueda">
+                                                                        <button class="search-btn">Buscar</button>
+                                                                </form>
+                                                            </div>
+                                                        </div>
+                                                        <!-- /SEARCH BAR -->
+
+                                                        <!-- ACCOUNT -->
+                                                        <div class="col-md-2 clearfix">
+                                                            <div class="header-ctn">
+                                                                <!-- Wishlist -->
+                                                                <div>
+                                                                    <a href="buscar/AdoptadosporZona1">
+                                                                        <div class="imgicon">
+                                                                            <img  src="/img/iconologin.png" alt="">
+                                                                        </div>
+                                                                    </a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <!-- /ACCOUNT -->
+                                                    </div>
+                                                    <!-- row -->
+                                                </div>
+                                                <!-- container -->
+                                            </div>
+                                            <!-- /MAIN HEADER -->
+                                        </header>
+                                        <!-- /HEADER -->
+
+                                        <!-- NAVIGATION -->
+                                        <nav id="navigation">
+                                            <!-- container -->
+                                            <div class="container">
+                                                <!-- responsive-nav -->
+
+                                                <div id="responsive-nav" >
+                                                    <!-- NAV -->
+                                                    <ul class="main-nav nav navbar-nav">
+
+                                                        <li><a href="buscar/AdoptadosporZona1">Adopción</a></li>
+                                                        <li><a href="/perdidos">Perdidos</a></li>
+                                                        <li><a href="/encontrados">Encontrados</a></li>
+                                                        <li><a href="/transito">Transito</a></li>
+                                                        <li class="active"><a href="#">Donaciones</a></li>
+
+
+                                                    </ul>
+                                                    <!-- /NAV -->
+                                                </div>
+                                                <!-- /responsive-nav -->
+
+                                            </div>
+                                            <!-- /container -->
+                                        </nav>
+                                        <!-- /NAVIGATION -->
+
+
+                                        <!-- SECTION -->
+                                        <div class="section">
+                                            <!-- container -->
+                                            <div class="container">
+                                                <!-- row -->
+                                                <div class="row">
+
+                                                    <!-- STORE -->
+                                                    <div id="store" class="col-md-6">
+                                                        <!-- store top filter -->
+                                                        <div class="store-filter clearfix">
+                                                            <div class="titulozona">
+                                                                <h3 class="display-9" th:if="${error != null}" th:text="${error}" style="color:black;"</h3>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div id="store" class="col-md-6">
+                                                        <!-- store top filter -->
+                                                        <div class="store-filter clearfix">
+                                                            <div class="store-sort">
+                                                                <div class="orden-zona">
+
+                                                                    <form class="form-inline my-2 my-lg-0" action="/buscar/AdoptadosporZona1" method="GET">
+                                                                        <!--<input class="form-control mr-sm-2" type="search" placeholder="Buscar" aria-label="Buscar"  name="q" th:value="${q}">-->
+                                                                        <!--<p  class="form-control mr-sm-2" th:if="${error != null}" th:text="${error}" style="color:black;"></p>-->   
+
+                                                                        <label>Zona</label>
+                                                                        <select class="form-control" name="idZona"> 
+                                                                            <option th:each="zona : ${zonas}" th:value="${zona.id}" th:text="${zona.nombre}"></option>
+
+                                                                        </select>    
+
+
+
+                                                                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar <i class="fa fa-search"></i></button>
+                                                                    </form>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="row">
+
+                                                    <!-- product -->
+                                                    <tbody>
+                                                        <tr th:each="mascota : ${mascotas}">
+                                                            <div class="col-lg-4 col-xs-6">
+                                                                <div class="product">
+                                                                    <div class="product-img">
+
+
+                                                                        <img th:if="${mascota.foto != null}" th:src="@{/buscar/foto/__${mascota.foto.id}__}"  class="imgresponsive" >
+                                                                            <img th:unless="${mascota.foto != null}" th:src="@{/img/iconologin.png}"  class="imgresponsive" >
+                                                                                <!--<img <td th:file="${mascota.foto.contenido}" alt="">-->
+                                                                                <!--<img src="/img/iconologin.png" alt="">-->
+                                                                                </div>
+                                                                                <div class="product-body">
+                                                                                    <p <td th:text="${mascota.raza}" class="product-name"></p>
+                                                                                    <h3 <td th:text="${mascota.nombre}" class="product-name"><a href="#"></a></h3>
+                                                                                    <h4 <td th:text="${mascota.zona.nombre}" class="product-price"></h4>
+
+                                                                                </div>
+                                                                                <div class="add-to-cart">
+                                                                                    <a href="/perfilm">
+
+                                                                                        <form class="form-inline my-2 my-lg-0" action="/buscar/idMascota" method="GET">
+                                                                                            <input class="form-control mr-sm-2" type="search" placeholder="Buscar" aria-label="Buscar"  name="q" th:value="${mascota.id}">
+                                                                                                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar <i class="fa fa-search"></i></button>    
+
+
+                                                                                                <button class="add-to-cart-btn" ><i class=""></i> Visita el perfil</button>
+                                                                                                </a>
+                                                                                                </div>
+                                                                                                </div>
+                                                                                                </div>
+                                                                                                </tr>
+
+                                                                                                </div>
+                                                                                                <!-- /store products -->
+
+                                                                                                <!-- store bottom filter -->
+                                                                                                <div class="store-filter clearfix justify-content-center">
+
+                                                                                                    <ul class="store-pagination">
+                                                                                                        <li class="active">1</li>
+                                                                                                        <li><a href="#">2</a></li>
+                                                                                                        <li><a href="#">3</a></li>
+                                                                                                        <li><a href="#">4</a></li>
+                                                                                                        <li><a href="#"><i class="fa fa-angle-right"></i></a></li>
+                                                                                                    </ul>
+                                                                                                </div>
+                                                                                                <!-- /store bottom filter -->
+                                                                                                </div>
+                                                                                                <!-- /STORE -->
+                                                                                                </div>
+                                                                                                <!-- /row -->
+
+                                                                                                <!-- FOOTER -->
+                                                                                                <footer id="footer">
+                                                                                                    <!-- top footer -->
+                                                                                                    <div class="section">
+                                                                                                        <!-- container -->
+                                                                                                        <div class="container ">
+                                                                                                            <!-- row -->
+                                                                                                            <div class="row ">
+                                                                                                                <div class="col-md-12 col-xs-1">
+                                                                                                                    <div class="footer">
+                                                                                                                        <h3 class="footer-title">Contacto</h3>
+                                                                                                                        <ul class="footer-links">
+                                                                                                                            <li><a href="#"><i class="fa fa-phone"></i>+0261-496-2345</a></li>
+                                                                                                                            <li><a href="#"><i class="fa fa-envelope-o"></i>depelos@gmail.com</a></li>
+                                                                                                                        </ul>
+                                                                                                                    </div>
+                                                                                                                </div>
+
+
+
+                                                                                                                <div class="clearfix visible-xs"></div>
+
+                                                                                                                <div class="col-md-12 col-xs-1">
+                                                                                                                    <div class="footer">
+                                                                                                                        <ul class="footer-links">
+                                                                                                                            <li><a href="/terminosycondiciones">Terminos & Condiciones</a></li>
+                                                                                                                            <li><a href="/quienessomos">Quienes somos</a></li>
+                                                                                                                        </ul>
+                                                                                                                    </div>
+                                                                                                                </div>
+
+
+                                                                                                                </footer>
+                                                                                                                <!-- /FOOTER -->
+
+                                                                                                                <!-- jQuery Plugins -->
+                                                                                                                <script src="/js/jquery.min.js"></script>
+                                                                                                                <script src="/js/bootstrap.min.js"></script>
+                                                                                                                <script src="/js/slick.min.js"></script>
+                                                                                                                <script src="/js/nouislider.min.js"></script>
+                                                                                                                <script src="/js/jquery.zoom.min.js"></script>
+                                                                                                                <script src="/js/main.js"></script>
+
+                                                                                                                </body>
+                                                                                                                </html>
